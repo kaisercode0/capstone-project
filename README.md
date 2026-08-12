@@ -1,36 +1,41 @@
-<<<<<<< HEAD
-# Capstone Project 
-=======
-# Capstone Project
+# Settings Form
 
-## Overview
-A short description of what this project does and why it exists.
+A React settings form with client-side validation using **React Hook Form** and **Zod**.
 
-## Stack
-- Language/Framework: TBD
-- Package manager: npm
-- AI assistant: Claude Code
+## Features
 
-## Getting Started
+- **Profile fields**: display name, email, bio (with character count)
+- **Preferences**: theme, language, timezone
+- **Notifications**: email, push, and marketing toggles
+- **Validation**: blur-triggered validation with accessible error messages
+- **UX**: dirty-state tracking, reset, loading state, success banner
+
+## Getting started
+
 ```bash
-git clone <repo-url>
-cd <repo-name>
 npm install
+npm run dev
 ```
 
-## Project Structure
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Validation rules
+
+| Field | Rules |
+|-------|-------|
+| Display name | 2–50 characters |
+| Email | Required, valid email format |
+| Bio | Optional, max 280 characters |
+| Theme / Language / Timezone | Required selection |
+
+## Project structure
+
 ```
-.
-├── src/          # application source code
-├── tests/        # test files
-├── CLAUDE.md     # AI assistant conventions
-└── README.md
+src/
+  schema.ts              # Zod schema + defaults
+  components/
+    SettingsForm.tsx     # Form UI + react-hook-form wiring
+    SettingsForm.css
+  App.tsx
+  main.tsx
 ```
-
-## Status
-🚧 Early setup phase — details to be filled in as the project develops.
-
-## License
-MIT — see LICENSE file.
-
->>>>>>> e387eaab9482f5f3d4af5176193818256e7dbe7c

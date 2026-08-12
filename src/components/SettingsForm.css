@@ -1,0 +1,226 @@
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.settings-form__header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.settings-form__header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.settings-form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.settings-form__section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.settings-form__section h2 {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 540px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field__optional {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.field input[type='text'],
+.field input[type='email'],
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.field input[aria-invalid='true'],
+.field textarea[aria-invalid='true'],
+.field select[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.field input[aria-invalid='true']:focus,
+.field textarea[aria-invalid='true']:focus,
+.field select[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px var(--danger-ring);
+}
+
+.field__error {
+  font-size: 0.8125rem;
+  color: var(--danger);
+}
+
+.field__hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.toggle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.toggle:hover {
+  border-color: var(--border-hover);
+}
+
+.toggle input {
+  margin-top: 0.15rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.toggle__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.toggle__label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.toggle__desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.settings-form__banner {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.settings-form__banner--error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+
+.settings-form__banner--success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+
+.settings-form__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.625rem 1.125rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
