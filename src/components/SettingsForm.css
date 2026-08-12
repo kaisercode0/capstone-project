@@ -1,0 +1,123 @@
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.settings-form__header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.settings-form__header p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field input[type='text'],
+.field input[type='email'] {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.field input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.field input[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px var(--danger-ring);
+}
+
+.field__error {
+  font-size: 0.8125rem;
+  color: var(--danger);
+}
+
+.settings-form__banner {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.settings-form__banner--error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+
+.settings-form__banner--success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+
+.settings-form__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.625rem 1.125rem;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
